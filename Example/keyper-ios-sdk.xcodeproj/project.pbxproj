@@ -21,6 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6F6AEFAD1D1D7A0A00C3A5E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6AEFAC1D1D7A0A00C3A5E5 /* Launch Screen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9484205D41EF4D6074EB07B6 /* Pods_keyper_ios_sdk_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF63B26DA8AD256766E6DBC /* Pods_keyper_ios_sdk_Example.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,9 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		66B152CEB0C606988324A3B5 /* Pods-keyper-ios-sdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keyper-ios-sdk_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-keyper-ios-sdk_Example/Pods-keyper-ios-sdk_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6F35626A1D2258920005DCAB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F35626B1D2258930005DCAB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F6AEFAC1D1D7A0A00C3A5E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7CF63B26DA8AD256766E6DBC /* Pods_keyper_ios_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keyper_ios_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		93DCE1BD3372865794A3A40A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				6003F59C195388D20070C39A /* KEYAppDelegate.h */,
 				6003F59D195388D20070C39A /* KEYAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				6F6AEFAC1D1D7A0A00C3A5E5 /* Launch Screen.storyboard */,
 				6003F5A5195388D20070C39A /* KEYViewController.h */,
 				6003F5A6195388D20070C39A /* KEYViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -259,6 +264,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 6003F581195388D10070C39A;
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
@@ -278,6 +284,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6F6AEFAD1D1D7A0A00C3A5E5 /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +426,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6003F597195388D20070C39A /* en */,
+				6F35626A1D2258920005DCAB /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -427,6 +435,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6003F5B9195388D20070C39A /* en */,
+				6F35626B1D2258930005DCAB /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

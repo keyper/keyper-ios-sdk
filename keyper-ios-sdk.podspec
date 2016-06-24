@@ -27,15 +27,14 @@ TODO: Add long description of the pod here.
   s.social_media_url        = 'https://twitter.com/keyper'
 
   s.platforms               = { :ios => '8.0' }
-  s.source                  = { :http => 'https://bintray.com/keyper/generic/download_file?file_path=io/keyper/ios/keyper-ios-sdk_0.9.zip', :type => 'zip' }
-  s.source_files            = '*.h'
+  s.source                  = { :git => 'https://github.com/keyper/keyper-ios-sdk.git', :branch => s.version.to_s }
 
-  # s.public_header_files     = 'keyper-ios-sdk/Library/*.h'
-
-  s.preserve_paths      = 'libkeyper-ios-sdk-source.a'
-  s.vendored_libraries  = 'libkeyper-ios-sdk-source.a'
-  s.resources           = ['*.bundle']
+  s.source_files            = 'keyper-ios-sdk/*.h'
+  s.vendored_libraries      = 'keyper-ios-sdk/libkeyper-ios-sdk.a'
+  s.resources               = ['keyper-ios-sdk/*.bundle']
+  s.public_header_files     = 'keyper-ios-sdk/*.h'
+  s.preserve_paths          = 'keyper-ios-sdk/*'
   
-  s.frameworks  = 'Foundation', 'UIKit', 'MapKit', 'EventKit', 'EventKitUI', 'AddressBook', 'CoreGraphics'
-
+  s.frameworks  = 'Foundation', 'UIKit', 'MapKit', 'EventKit', 'EventKitUI', 'AddressBook', 'CoreGraphics', 'CoreLocation', 'CoreImage', 'AVFoundation', 'ImageIO', 'MessageUI', 'SystemConfiguration', 'MobileCoreServices', 'Accelerate'
+  s.library     = 'xml2'
 end

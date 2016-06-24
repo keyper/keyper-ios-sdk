@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'keyper-ios-sdk_Example' do
-  pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :branch => '0.9.0'
+  pod 'keyper-ios-sdk', :path => '../'
 
   target 'keyper-ios-sdk_Tests' do
     inherit! :search_paths
