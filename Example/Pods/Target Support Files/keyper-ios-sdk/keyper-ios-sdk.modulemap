@@ -1,6 +1,0 @@
-framework module keyper_ios_sdk {
-  umbrella header "keyper-ios-sdk-umbrella.h"
-
-  export *
-  module * { export * }
-}
