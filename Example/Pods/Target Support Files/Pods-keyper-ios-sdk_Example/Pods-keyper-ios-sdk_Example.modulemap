@@ -1,0 +1,6 @@
+framework module Pods_keyper_ios_sdk_Example {
+  umbrella header "Pods-keyper-ios-sdk_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

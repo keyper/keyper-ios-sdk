@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'keyper-ios-sdk'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of keyper-ios-sdk.'
+  s.version          = '0.9.0'
+  s.summary          = 'iOS SDK for keyper.io - ticketing with friends.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,20 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/keyper-ios-sdk'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Manuel Maly' => 'manuel.maly@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/keyper-ios-sdk.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.homepage                = 'https://github.com/keyper/keyper-ios-sdk'
+  s.license                 = { :type => 'MIT', :file => 'LICENSE' }
+  s.author                  = { 'Manuel Maly' => 'manuel.maly@gmail.com' }
+  s.source                  = { :http => 'https://bintray.com/keyper/generic/download_file?file_path=io%2Fkeyper%2Fios%2Fkeyper-ios-sdk_0.9.zip', :flatten => true }
+  s.social_media_url        = 'https://twitter.com/keyper'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target   = '8.0'
 
-  s.source_files = 'keyper-ios-sdk/Classes/**/*'
+  s.public_header_files     = 'keyper-ios-sdk/Library/*.h'
+
+  s.preserve_paths      = 'libkeyper-ios-sdk.a'
+  s.vendored_libraries  = 'libkeyper-ios-sdk.a'
+  s.resources           = ['*.bundle']
   
-  # s.resource_bundles = {
-  #   'keyper-ios-sdk' => ['keyper-ios-sdk/Assets/*.png']
-  # }
+  s.frameworks  = 'Foundation', 'UIKit', 'MapKit', 'EventKit', 'EventKitUI', 'AddressBook', 'CoreGraphics'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
