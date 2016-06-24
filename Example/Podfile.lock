@@ -16,12 +16,18 @@ DEPENDENCIES:
   - Expecta
   - Expecta+Snapshots
   - FBSnapshotTestCase
-  - keyper-ios-sdk (from `../`)
+  - keyper-ios-sdk (from `https://github.com/keyper/keyper-ios-sdk.git`, branch `0.9.0`)
   - Specta
 
 EXTERNAL SOURCES:
   keyper-ios-sdk:
-    :path: ../
+    :branch: 0.9.0
+    :git: https://github.com/keyper/keyper-ios-sdk.git
+
+CHECKOUT OPTIONS:
+  keyper-ios-sdk:
+    :commit: ba08e4225d79ae4ffd8123aced7e0acd7d91fa5c
+    :git: https://github.com/keyper/keyper-ios-sdk.git
 
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
@@ -30,6 +36,6 @@ SPEC CHECKSUMS:
   keyper-ios-sdk: d010f6382d71083a1af025fb70df741239d8d77e
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 
-PODFILE CHECKSUM: 0c46691ba813a2c1c38078bb65f20b8e8e9ab611
+PODFILE CHECKSUM: e658ec8918a615c0cc900b5761bf185fd3c93aae
 
 COCOAPODS: 1.0.0

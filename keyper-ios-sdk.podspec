@@ -25,11 +25,12 @@ TODO: Add long description of the pod here.
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }
   s.author                  = { 'Manuel Maly' => 'manuel.maly@gmail.com' }
   s.source                  = { :http => 'https://bintray.com/keyper/generic/download_file?file_path=io%2Fkeyper%2Fios%2Fkeyper-ios-sdk_0.9.zip', :flatten => true }
+  s.source_files            = '*.h'
   s.social_media_url        = 'https://twitter.com/keyper'
 
   s.ios.deployment_target   = '8.0'
 
-  s.public_header_files     = 'keyper-ios-sdk/Library/*.h'
+  # s.public_header_files     = 'keyper-ios-sdk/Library/*.h'
 
   s.preserve_paths      = 'libkeyper-ios-sdk.a'
   s.vendored_libraries  = 'libkeyper-ios-sdk.a'
