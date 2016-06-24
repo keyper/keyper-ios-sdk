@@ -32,8 +32,8 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files     = 'keyper-ios-sdk/Library/*.h'
 
-  s.preserve_paths      = 'libkeyper-ios-sdk.a'
-  s.vendored_libraries  = 'libkeyper-ios-sdk.a'
+  s.preserve_paths      = 'libkeyper-ios-sdk-source.a'
+  s.vendored_libraries  = 'libkeyper-ios-sdk-source.a'
   s.resources           = ['*.bundle']
   
   s.frameworks  = 'Foundation', 'UIKit', 'MapKit', 'EventKit', 'EventKitUI', 'AddressBook', 'CoreGraphics'
