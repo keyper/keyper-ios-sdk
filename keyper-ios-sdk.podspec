@@ -27,7 +27,7 @@ TODO: Add long description of the pod here.
   s.social_media_url        = 'https://twitter.com/keyper'
 
   s.platforms               = { :ios => '8.0' }
-  s.source                  = { :http => 'https://bintray.com/keyper/generic/download_file?file_path=io%2Fkeyper%2Fios%2Fkeyper-ios-sdk_0.9.zip', :flatten => true }
+  s.source                  = { :http => 'https://bintray.com/keyper/generic/download_file?file_path=io/keyper/ios/keyper-ios-sdk_0.9.zip', :flatten => true }
   s.source_files            = '*.h'
 
   # s.public_header_files     = 'keyper-ios-sdk/Library/*.h'
