@@ -27,7 +27,7 @@ TODO: Add long description of the pod here.
   s.social_media_url        = 'https://twitter.com/keyper'
 
   s.platforms               = { :ios => '8.0' }
-  s.source                  = { :git => 'https://github.com/keyper/keyper-ios-sdk.git', :branch => s.version.to_s }
+  s.source                  = { :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => s.version.to_s }
 
   s.source_files            = 'keyper-ios-sdk/*.h'
   s.vendored_libraries      = 'keyper-ios-sdk/libkeyper-ios-sdk.a'

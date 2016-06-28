@@ -30,7 +30,7 @@
 
 - (IBAction)onStartButtonTapped:(id)sender {
     
-    [KEYSDK configure:^(KEYSDKConfiguration *c) {
+    [KEYSDK.sharedSDK configure:^(KEYSDKConfiguration *c) {
         c.apiBaseURL = [NSURL URLWithString:@"https://develop.api.keyper.io/api/"];
         c.enableSSLCertificatePinning = NO;
         
@@ -43,7 +43,7 @@
         c.enableAFNetworkingLogger = YES;
     }];
     
-    [KEYSDK authenticateWithRouteIdentifier:@"keyper" hostAppToken:@"9052BEFF-C81B-4777-ABC7-C0D542F91CF6" resultBlock:nil];
+    [KEYSDK.sharedSDK authenticateWithRouteIdentifier:@"keyper" hostAppToken:@"9052BEFF-C81B-4777-ABC7-C0D542F91CF6" resultBlock:nil];
  
     UIViewController *vc = KEYSDK.sharedSDK.ticketsRootViewController;
     vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onDoneTapped)];
