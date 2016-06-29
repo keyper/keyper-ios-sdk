@@ -61,6 +61,10 @@ The SDK requests one permission at runtime:
 
 - Address book contacts (to retrieve contacts when sending tickets to friends)
  
+## Localization/Language
+
+You need to setup the localizations that you want the SDK to show within your project. Currently, keyper SDK supports English and German (en & de). Go to your project file, select the project in the left pane at the top, and look at the "Localizations" section. E.g. if you only have an "English" item in this section, then the SDK will be in English only.
+
 ## Sample App
 
 If you want to see a working app, please make sure you have the current version of Cocoapods installed (```sudo gem install cocoapods```) and execute this in Terminal.app: 
