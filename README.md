@@ -117,7 +117,7 @@ or include a callback that lets you react to when the authentication finishes or
 
 The route identifier is configured in the b2b web app. The host app token is the session token of your user.
 
-Once you have authenticated your user, you can present the user with the mobile ticket part of the SDK. You can even show this UI part before authe
+Once you have authenticated your user, you can present the user with the mobile ticket part of the SDK. You can even show this UI part before authentication is finished - a loading indicator will be shown until all requests have completed (tickets and orders calls will run after authentication finished).
 
 If you are not sure if the SDK is authenticated, you can use the following helper method.
 
