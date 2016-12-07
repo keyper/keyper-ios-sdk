@@ -7,13 +7,103 @@
 //
 
 #import "KEYAppDelegate.h"
+#import "Branch.h"
+#import "KEYSDK.h"
+#import "KEYSDKConfiguration.h"
+#import "KEYPushNotificationRecommendedHostAppAction.h"
 
 @implementation KEYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    // Configure most important properties in keyper SDK. We will call configure: again in
+    // KEYViewController.m, but this is not necessary; you could just do it all at once
+    // in here.
+    [KEYSDK.sharedSDK configure:^(KEYSDKConfiguration *c) {
+        c.apiBaseURL = [NSURL URLWithString:@"https://develop.api.keyper.io/api/"];
+        c.enableSSLCertificatePinning = NO;
+    }];
+
+    // Only configure branch.io once per runtime
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [[Branch getInstance] initSessionWithLaunchOptions:launchOptions andRegisterDeepLinkHandler:^(NSDictionary *_Nonnull params, NSError *_Nullable error) {
+            // Let keyper SDK handle deep link if the SDK recognizes it as such
+            if ([[KEYSDK sharedSDK] isKeyperDeepLink:params]) {
+                [[KEYSDK sharedSDK] handleDeepLink:params error:error];
+            }
+        }];
+    });
+
+    [self requestPushNotifications];
+
     return YES;
+}
+
+- (void)requestPushNotifications {
+    UIApplication *application = [UIApplication sharedApplication];
+
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+    [application registerUserNotificationSettings:settings];
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [application registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)remoteNotification fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
+
+    switch (application.applicationState) {
+        case UIApplicationStateInactive: {
+            // The user has put the app in background, but not yet killed it.
+            // She clicked or swiped the notification and the app now opens.
+            KEYPushNotificationRecommendedHostAppAction *recommendedAction = [KEYSDK.sharedSDK recommendedHostAppActionWithNotification:remoteNotification];
+
+            if (recommendedAction.letSDKHandleNotification) {
+                // This will be executed if keyper SDK
+                [[KEYSDK sharedSDK] handleRemoteNotification:remoteNotification];
+            }
+
+            if (recommendedAction.showSDKRootNavigationController) {
+                // Insert code here that shows the keyper SDK's view (rootNavigationController) now
+            }
+
+            if (recommendedAction.authenticateSDK) {
+                // Authenticate keyper SDK if appropriate. This will be executed if keyper SDK did not find any active credential data.
+            }
+
+            completionHandler(UIBackgroundFetchResultNewData);
+            break;
+        }
+        default:
+            // App is either open or in backgrounding mode (i.e. the system wakes the app for a short time)
+            // The user did not click or swipe the notification, so we don't need to switch views.
+            // Handle with your own logic if necessary.
+            break;
+    }
+}
+
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+
+    // Setup push notifications handling in keyper SDK
+    [KEYSDK.sharedSDK setDeviceTokenForPushNotifications:deviceToken];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+
+    // Let branch.io handle incoming URLs (< iOS 10)
+    BOOL handled = [[Branch getInstance] handleDeepLink:url];
+
+    return handled;
+}
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *_Nullable))restorationHandler {
+
+    // Let branch.io handle incoming URLs (iOS 10+)
+    BOOL handled = [[Branch getInstance] continueUserActivity:userActivity];
+
+    return handled;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
