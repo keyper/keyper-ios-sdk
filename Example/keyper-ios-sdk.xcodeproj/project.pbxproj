@@ -21,6 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6F5F393A1DF85F8D00C8E3F8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5F39391DF85F8D00C8E3F8 /* libz.tbd */; };
 		6F6AEFAD1D1D7A0A00C3A5E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6AEFAC1D1D7A0A00C3A5E5 /* Launch Screen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9484205D41EF4D6074EB07B6 /* Pods_keyper_ios_sdk_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF63B26DA8AD256766E6DBC /* Pods_keyper_ios_sdk_Example.framework */; };
@@ -60,6 +61,8 @@
 		66B152CEB0C606988324A3B5 /* Pods-keyper-ios-sdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-keyper-ios-sdk_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-keyper-ios-sdk_Example/Pods-keyper-ios-sdk_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6F35626A1D2258920005DCAB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F35626B1D2258930005DCAB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F5F39371DF85EA400C8E3F8 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		6F5F39391DF85F8D00C8E3F8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6F6AEFAC1D1D7A0A00C3A5E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7CF63B26DA8AD256766E6DBC /* Pods_keyper_ios_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keyper_ios_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5F393A1DF85F8D00C8E3F8 /* libz.tbd in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -121,6 +125,8 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F5F39391DF85F8D00C8E3F8 /* libz.tbd */,
+				6F5F39371DF85EA400C8E3F8 /* libbz2.1.0.tbd */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,

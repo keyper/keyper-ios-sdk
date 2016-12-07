@@ -41,4 +41,11 @@
 - (KEYPushNotificationRecommendedHostAppAction *)recommendedHostAppActionWithNotification:(NSDictionary *)remoteNotification;
 - (void)handleRemoteNotification:(NSDictionary *)remoteNotification;
 
+
+// Deep Linking with Branch.io
+// Call this when a deep link arrives that must be handled by keyper SDK.
+// You can find out whether it has to be handled by using isKeyperDeepLink:;
+- (void)handleDeepLink:(NSDictionary *)params error:(NSError *)error;
+- (BOOL)isKeyperDeepLink:(NSDictionary *)params;
+
 @end

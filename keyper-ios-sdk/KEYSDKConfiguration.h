@@ -12,7 +12,11 @@
 
 // Server configuration
 @property (nonatomic, copy) NSURL *apiBaseURL;
-@property (nonatomic, assign) BOOL enableSSLCertificatePinning; // only works for production server environment; else, set to NO
+@property (nonatomic, assign) BOOL enableSSLCertificatePinning; // only works for keyper's production server environment; else, set to NO
+
+// Deep linking
+@property (nonatomic, assign) BOOL enableBranchDeepLinking; // ignored if Branch is not used
+@property (nonatomic, assign) BOOL allowDeepLinkingToDismissAnyModalView; // any of the app's modal views (presentViewController:animated:completion:) are dismissed when a ticket transfer is processed by keyper SDK
 
 // Look and Feel
 @property (nonatomic, copy) UIColor *tintColor;

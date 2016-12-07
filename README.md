@@ -13,7 +13,7 @@ There are at least two ways to integrate the SDK: with or without Cocoapods. We 
 
 ### Prerequisites
 
-- This SDK has been built with Xcode 7.3.1, so we'd recommend you use at least this version. 
+- This SDK has been built with Xcode 8.1, so we'd recommend you use at least this version.
 - If you decide to use Cocoapods, you need to use version 1.0.0 or higher (check with ```pod --version```), since the podspec is not compabible with lower versions.
 - The SDK does not use any Swift code, so you need not worry about runtime versions. 
 
@@ -32,7 +32,7 @@ _Note: You can look at the Example project in this repository to see how the SDK
     
 	```
 	target 'target-name-that-you-copied-from-xcode' do 
-      pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '0.9.0'
+      pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '0.9.1'
 	end
 	```
 	Look at this repository's branch selector to find out which versions are available. Each version has its own branch. Later on, the SDK might be available via Cocoapod's central repository, but currently it's not.

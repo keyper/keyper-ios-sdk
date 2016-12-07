@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'keyper-ios-sdk'
-  s.version          = '0.9.0'
+  s.version          = '0.9.1'
   s.summary          = 'iOS SDK for keyper.io - ticketing with friends.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Integrate a full ticketing solution by using this SDK.
                        DESC
 
   s.homepage                = 'https://github.com/keyper/keyper-ios-sdk'
@@ -36,5 +36,5 @@ TODO: Add long description of the pod here.
   s.preserve_paths          = 'keyper-ios-sdk/*'
   
   s.frameworks  = 'Foundation', 'UIKit', 'MapKit', 'EventKit', 'EventKitUI', 'AddressBook', 'CoreGraphics', 'CoreLocation', 'CoreImage', 'AVFoundation', 'ImageIO', 'MessageUI', 'SystemConfiguration', 'MobileCoreServices', 'Accelerate'
-  s.library     = 'xml2'
+  s.library     = 'xml2', 'z'
 end

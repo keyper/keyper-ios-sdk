@@ -11,7 +11,10 @@ extern NSString * const KEYHostAppShouldChangeStatusBarStyleObjectKeyName; // e.
 extern NSString * const KEYPushNotificationKeyNotificationType;
 extern NSString * const KEYPushNotificationKeyID;
 
+extern NSString * const KEYHostAppShouldShowKeyperSDKScreen;
+
 // These notifications are currently not sent in public SDK builds.
 extern NSString * const KEYSDKProfileViewConfiguredNewAccountSuccessfullyNotificationName;
 extern NSString * const KEYHostAppShouldShowSettingsScreenNotificationName;
 extern NSString * const KEYHostAppShouldShowSettingsScreenNavigationControllerKeyName;
+extern NSString * const KEYPopToTicketsRootViewControllerNotificationName;
