@@ -57,9 +57,19 @@ The SDK consists of:
 - A static library (libkeyper-ios-sdk.a) that contains all the views and business logic of the SDK in compiled form. Note that this file is way bigger than the actual size impact the SDK will have on your app.
 - Bundle files (*.bundle) that contain image and localization assets. You can look into them by right-clicking in Finder and selecting "Show package contents".
 
-The SDK requests one permission at runtime:
+The SDK requests two permissions at runtime:
 
 - Address book contacts (to retrieve contacts when sending tickets to friends)
+- Calendar access (to let the user store an event's date to her calendar)
+
+Therefore, please add this to your app target's Info.plist file:
+
+```
+<key>NSContactsUsageDescription</key>
+<string>Accessing Contacts for choosing ticket recipients</string>
+<key>NSCalendarsUsageDescription</key>
+    <string>Calendar access</string>
+```
  
 ## Localization/Language
 
@@ -155,18 +165,136 @@ Note that both ```rootNavigationController``` and ```ticketsRootViewController``
 Your app can authenticate right when it starts, or just at the time when it shows ```rootNavigationController``` or ```ticketsRootViewController```. It is even possible to defer authentication a bit; the views will just display a loading indicator until authentication has finished.
 
 - If the SDK is authenticated, tickets and offers are loaded and shown.
-- If the SDK is not yet authenticated at the time of showing the UI, or you have called ```[KEYSDK.sharedSDK logout]```, then the mobile ticket area will display no tickets, but a loading indicator at a top. This is because the views wait for a successful authentication via ```authenticateWithRouteIdentifier:hostAppToken:resultBlock:```, after which they will properly reload and show the tickets.
+- If the SDK is not yet authenticated at the time of showing the UI, or you have called ```[KEYSDK.sharedSDK logout]```, then the mobile ticket area will display no tickets, but a loading indicator at the top. This is because the views wait for a successful authentication via ```authenticateWithRouteIdentifier:hostAppToken:resultBlock:```, after which they will properly reload and show the tickets.
 - If the SDK has an old or invalid token from a previous session, the mobile ticket area will display a user-dismissible error message; however, again, the views will properly reload and show the tickets after another successful authentication via ```authenticateWithRouteIdentifier:hostAppToken:resultBlock:```.
 
 ### Logout
 
-If you want to clear SDK data from the device (e.g. when you logout your user), you can use the following methods to do so:
+If you want to clear SDK data from the device (e.g. when you logout your user), you can use the following method to do so:
 
 ```
 [KEYSDK.sharedSDK logout];
 ```
 
 The logout method will clear the keyper user session and all related data from the device as well as unsubscribe the device from keyper push notifications (if they were configured).
+
+### Push Notifications
+
+To register for remote push notifications (if your app not already does), add this code to the App Delegate:
+
+```
+- (void)requestPushNotifications {
+    UIApplication *application = [UIApplication sharedApplication];
+
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+    [application registerUserNotificationSettings:settings];
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [application registerForRemoteNotifications];
+}
+```
+
+Call `requestPushNotifications` as soon as possible (e.g. after the user has logged into your app, or even right at app start).
+
+If you want to let keyper servers send push notifications to your app (please talk to our support about that: dev@keyper.io), also add this code in the App Delegate:
+
+```
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+
+    // Put your own configuration here if necessary
+
+    [KEYSDK.sharedSDK setDeviceTokenForPushNotifications:deviceToken];
+}
+```
+
+The actual notification handling is done with the following code. Note that this is not yet adapted to the new iOS 10 notification APIs - the iOS 9 APIs still work fine though.
+
+```
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)remoteNotification fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
+
+    switch (application.applicationState) {
+        case UIApplicationStateInactive:
+            // The user has put the app in background, but not yet killed it.
+            // She clicked or swiped the notification and the app now opens.
+            KEYPushNotificationRecommendedHostAppAction *recommendedAction = [KEYSDK.sharedSDK recommendedHostAppActionWithNotification:remoteNotification];
+
+            if (recommendedAction.letSDKHandleNotification) {
+                // This will be executed if keyper SDK
+                [[KEYSDK sharedSDK] handleRemoteNotification:remoteNotification];
+            }
+
+            if (recommendedAction.showSDKRootNavigationController) {
+                // Insert code here that shows the keyper SDK's view (rootNavigationController) now
+            }
+
+            if (recommendedAction.authenticateSDK) {
+                // Authenticate keyper SDK if appropriate. This will be executed if keyper SDK did not find any active credential data.
+            }
+
+            completionHandler(UIBackgroundFetchResultNewData);
+            break;
+        default:
+            // App is either open or in backgrounding mode (i.e. the system wakes the app for a short time)
+            // The user did not click or swipe the notification, so we don't need to switch views.
+            // Handle with your own logic if necessary.
+            break;
+    }
+}
+```
+
+### Deep Linking
+
+keyper features a tight integration with branch.io's deep linking framework. To setup deep linking in your app, please follow these steps (you can also look at the sample app code):
+
+**1. Add your app's branch key to each relevant target's Info.plist file:**
+
+```
+<key>branch_key</key>
+<dict>
+    <key>live</key>
+    <string>key_<YOUR_KEY_HERE></string>
+</dict>
+```
+
+**2. In the App Delegate, beneath the configuration code for the keyper SDK, setup Branch's deep link handling:**
+
+```
+static dispatch_once_t onceToken;
+dispatch_once(&onceToken, ^{
+    [[Branch getInstance] initSessionWithLaunchOptions:launchOptions andRegisterDeepLinkHandler:^(NSDictionary *_Nonnull params, NSError *_Nullable error) {
+        // Let keyper SDK handle deep link if the SDK recognizes it as such
+        if ([[KEYSDK sharedSDK] isKeyperDeepLink:params]) {
+            [[KEYSDK sharedSDK] handleDeepLink:params error:error];
+        }
+    }];
+});
+```
+
+You will also need to `#import "Branch.h"` or `@import Branch;`.
+
+**3. Finally, forward URLs that are opened in your app to Branch:**
+
+```
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+
+    // Let branch.io handle incoming URLs (< iOS 10)
+    BOOL handled = [[Branch getInstance] handleDeepLink:url];
+
+    return handled;
+}
+
+// ...
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *_Nullable))restorationHandler {
+
+    // Let branch.io handle incoming URLs (iOS 10+)
+    BOOL handled = [[Branch getInstance] continueUserActivity:userActivity];
+
+    return handled;
+}
+```
+
 
 ### Notifications
 
@@ -287,6 +415,7 @@ keyper SDK sends notifications via ```NSNotificationCenter``` to give the host a
 | KEYSDKDidLogoutNotificationName | The SDK will send this notification when a logout has completed (not only the host app can trigger a logout, but also certain errors returned by keyper's server, like invalid token errors). | none |
 | KEYHostAppShouldChangeTabBarVisibilityNotificationName | If the host app shows the SDK with a tab bar, then the SDK can request to hide/show the tab bar with this notification. The reason for this is that some views (e.g. sending a ticket) require full screen presentation and have a button at the bottom that must not be overlapped.  | KEYHostAppShouldChangeTabBarVisibleKeyName: @(YES)/@(NO)  |
 | KEYHostAppShouldChangeStatusBarStyleNotificationName | The SDK's views sometimes switch from light to dark status bar styles, and vice versa. If you need to implement this behavior, you can, by listening to this notification. | KEYHostAppShouldChangeStatusBarStyleObjectKeyName: @(UIStatusBarStyle) |
+| KEYHostAppShouldShowKeyperSDKScreen | The SDK asks the host app to show the SDK's main view (rootNavigationController) as soon as possible - ideally, synchronously. E.g. if you integrated the SDK in a UITabBarController, show the SDK's tab now; or if you integrated it in a slide-out menu, show the SDK in the center view now.<br>This is mainly fired when the SDK has received a branch.io deep link (see above for reference), and the tickets overview should be shown. The SDK in turn will in most cases also pop to the tickets overview, and in some cases display a confirmation alert. | none |
 
 
 ### Events received by the SDK
