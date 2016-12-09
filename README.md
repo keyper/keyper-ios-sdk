@@ -1,11 +1,26 @@
 # Keyper iOS SDK Developers Guide
-**SDK Version: 0.9.+**
+**SDK Version: 0.9.1**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *28.06.2016*
+Last Updated: *09 Dec 2016*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
+
+## Changelog
+
+**2016-06-29**
+
+Initial release
+
+**2016-12-09**
+
+- Adding support for handling season tickets, and even sending them individually
+- Using request batching (with https://github.com/keyper/KEYBatchRequest)
+- Added deep linking
+- Improving semantics, like price/currency homogeneity
+- Refining language when addressing the user
+- Fixing some bugs
 
 ## Getting Started
 
@@ -19,7 +34,7 @@ There are at least two ways to integrate the SDK: with or without Cocoapods. We 
 
 ### Adding SDK Binaries WITH Cocopoapods
 
-_Note: You can look at the Example project in this repository to see how the SDK is integrated using Cocoapods. Please note though that you will have to integrate the ```keyper-ios-sdk``` pod via ```pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '0.9.0'```, since the local path declaration only works for this example project._
+_Note: You can look at the Example project in this repository to see how the SDK is integrated using Cocoapods. Please note though that you will have to integrate the ```keyper-ios-sdk``` pod via ```pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '0.9.1'```, since the local path declaration only works for this example project._
 
 1. Open Terminal.app
 2. Update/install Cocoapods by running ```sudo gem install cocoapods```
@@ -41,7 +56,7 @@ _Note: You can look at the Example project in this repository to see how the SDK
 
 ### Adding SDK Binaries WITHOUT Cocopoapods
 
-1. Download and unzip the SDK's files (e.g., for version 0.9.0, the complete ZIP file can be found at https://github.com/keyper/keyper-ios-sdk/archive/0.9.0.zip - look at this repository's branch/tag selector to find out which versions are available).
+1. Download and unzip the SDK's files (e.g., for version 0.9.1, the complete ZIP file can be found at https://github.com/keyper/keyper-ios-sdk/archive/0.9.1.zip - look at this repository's branch/tag selector to find out which versions are available).
 2. Create a ```keyper SDK```, ```Vendor``` or similar group in your Xcode project if you don't want the SDK's files to clutter your structure
 3. Locate the folder ```keyper-ios-sdk``` within the previously extracted files, and drag them into your project (into a group if you want). If the previously extracted folder is within your project's folder, you can uncheck ```Copy items if needed``` in the dialog. Please note that you will only ever need the files in the ```keyper-ios-sdk``` folder, so you can delete all files outside that.
 
