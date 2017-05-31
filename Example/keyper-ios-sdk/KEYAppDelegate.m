@@ -20,9 +20,12 @@
     // Configure most important properties in keyper SDK. We will call configure: again in
     // KEYViewController.m, but this is not necessary; you could just do it all at once
     // in here.
+    // Also insert a valid token in KEYViewController.m (search for "INSERT TOKEN HERE").
+    // Please request a token from dev@keyper.io.
     [KEYSDK.sharedSDK configure:^(KEYSDKConfiguration *c) {
         c.apiBaseURL = [NSURL URLWithString:@"https://develop.api.keyper.io/api/"];
         c.enableSSLCertificatePinning = NO;
+        c.appSecret = @"sdk_ios_sample_secret";
     }];
 
     // Only configure branch.io once per runtime

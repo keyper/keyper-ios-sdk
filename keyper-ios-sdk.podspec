@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'keyper-ios-sdk'
-  s.version          = '0.9.1'
+  s.version          = '0.9.2'
   s.summary          = 'iOS SDK for keyper.io - ticketing with friends.'
 
 # This description is used to generate tags and improve search results.

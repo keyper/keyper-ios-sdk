@@ -43,7 +43,7 @@
         c.enableAFNetworkingLogger = YES;
     }];
     
-    [KEYSDK.sharedSDK authenticateWithRouteIdentifier:@"keyper" hostAppToken:@"9052BEFF-C81B-4777-ABC7-C0D542F91CF6" resultBlock:nil];
+    [KEYSDK.sharedSDK authenticateWithRouteIdentifier:@"keyper" hostAppToken:@"INSERT TOKEN HERE" resultBlock:nil];
  
     UIViewController *vc = KEYSDK.sharedSDK.ticketsRootViewController;
     vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onDoneTapped)];

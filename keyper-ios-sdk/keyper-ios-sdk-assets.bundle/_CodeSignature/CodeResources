@@ -232,6 +232,10 @@
 		<data>
 		3Ux+N5bmy5gbCsJHdT60XYdodYw=
 		</data>
+		<key>keyper.io-dec2016.cer</key>
+		<data>
+		djEgNJEjAASh84WnyjFQeY9M5xE=
+		</data>
 		<key>keyper.io.cer</key>
 		<data>
 		rv0pzuaJtslewsLRvgfNda5droA=
@@ -988,6 +992,17 @@
 			<key>hash2</key>
 			<data>
 			Wi4+Fp1OIwffXVaHhnBWwW6NFXmIYXDHtW5Jqqfa904=
+			</data>
+		</dict>
+		<key>keyper.io-dec2016.cer</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			djEgNJEjAASh84WnyjFQeY9M5xE=
+			</data>
+			<key>hash2</key>
+			<data>
+			zKCyBiAuk3pT4EFBgcAAT4pJBc/ZubA7ycBIi1OspQM=
 			</data>
 		</dict>
 		<key>keyper.io.cer</key>

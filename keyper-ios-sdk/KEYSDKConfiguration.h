@@ -11,8 +11,10 @@
 @interface KEYSDKConfiguration : NSObject<NSCoding, NSCopying>
 
 // Server configuration
-@property (nonatomic, copy) NSURL *apiBaseURL;
-@property (nonatomic, assign) BOOL enableSSLCertificatePinning; // only works for keyper's production server environment; else, set to NO
+@property (nonatomic, copy) NSURL *apiBaseURL; // required
+@property (nonatomic, copy) NSString *appSecret; // required
+@property (nonatomic, assign) BOOL enableSSLCertificatePinning; // only works for keyper's production server environment; make sure to update keyper SDK often if you set to YES; else, set to NO
+@property (nonatomic, assign) BOOL allowInvalidSSLCertificates; // set YES only for debugging purposes; strongly discouraged for production use!
 
 // Deep linking
 @property (nonatomic, assign) BOOL enableBranchDeepLinking; // ignored if Branch is not used
