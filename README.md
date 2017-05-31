@@ -15,12 +15,22 @@ Initial release
 
 **2016-12-09**
 
+v0.9.1
+
 - Adding support for handling season tickets, and even sending them individually
 - Using request batching (with https://github.com/keyper/KEYBatchRequest)
 - Added deep linking
 - Improving semantics, like price/currency homogeneity
 - Refining language when addressing the user
 - Fixing some bugs
+
+**2017-05-31**
+
+v0.9.2
+
+- Adding required appSecreat as KEYConfiguration parameter
+- Improved ticket card view, adding sales type at the bottom of tickets that support it
+- Bug fixes and improvements
 
 ## Getting Started
 
