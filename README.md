@@ -1,9 +1,9 @@
 # Keyper iOS SDK Developers Guide
-**SDK Version: 0.9.2**
+**SDK Version: 0.9.3**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *31 May 2017*
+Last Updated: *20 June 2017*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -31,6 +31,13 @@ v0.9.2
 - Adding required appSecreat as KEYConfiguration parameter
 - Improved ticket card view, adding sales type at the bottom of tickets that support it
 - Bug fixes and improvements
+
+**2017-06-20**
+
+v0.9.3
+
+- Adding automatic polling and refreshing for pending tickets (whose barcode is still being generated)
+- Turning the device's screen to max brightness when viewing an old/expired barcode 
 
 ## Getting Started
 
@@ -413,6 +420,7 @@ The SDK allows you to customize the look and feel of the SDK's logic and UI, in 
     c.navigationBarTextColor = [UIColor whiteColor];
     c.navigationBarFont = [UIFont fontWithName:@"HelveticaNeue-Medium" size:17.f];
     c.sendTicketsBadgeImage = [UIImage imageNamed:@"badge_friend"];
+    c.appSecret = @"sdk_ios_sample_secret";
 }];
 
 ```
