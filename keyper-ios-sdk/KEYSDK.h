@@ -16,6 +16,8 @@
 // Showing the SDK. ticketsRootViewController is always contained in rootNavigationController, and vice versa.
 // Ideally, you would just add rootNavigationController to your view hierarchy (e.g. tab bar or side menu),
 // and only access ticketsRootViewController for customization purposes (e.g. to set customTitleView).
+// You can also use just ticketsRootViewController, and insert it directly into your own UINavigationController.
+// In this case, the rootNavigationController is still instantiated, but will remain unused.
 @property (strong, nonatomic, readonly) UINavigationController *rootNavigationController;
 @property (strong, nonatomic, readonly) UIViewController *ticketsRootViewController;
 

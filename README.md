@@ -1,9 +1,9 @@
 # Keyper iOS SDK Developers Guide
-**SDK Version: 0.9.3**
+**SDK Version: 0.9.4**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *20 June 2017*
+Last Updated: *3 July 2017*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -38,6 +38,17 @@ v0.9.3
 
 - Adding automatic polling and refreshing for pending tickets (whose barcode is still being generated)
 - Turning the device's screen to max brightness when viewing an old/expired barcode 
+
+**2017-07-03**
+
+v0.9.4
+
+- Possibly fixing bug where host app does not react to choosing a phone or email address when sending a ticket 
+- Removing existing data of table views when logging out and in again (if user id changes)
+- Preventing multiple entries for contacts with multiple linked entries (e.g. for records from Facebook or Google)
+- Improve messaging when user tries to send tickets that have not yet been loaded
+- Possibly fixing problem that ticket actions are not correctly updated if the new data has no ticket actions contained
+- Greying out send-tickets button if tickets are not sendable
 
 ## Getting Started
 
