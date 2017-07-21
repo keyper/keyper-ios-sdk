@@ -1,9 +1,9 @@
-# Keyper iOS SDK Developers Guide
-**SDK Version: 0.9.4**
+ # Keyper iOS SDK Developers Guide
+**SDK Version: 1.0.0**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *3 July 2017*
+Last Updated: *21 July 2017*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -49,6 +49,17 @@ v0.9.4
 - Improve messaging when user tries to send tickets that have not yet been loaded
 - Possibly fixing problem that ticket actions are not correctly updated if the new data has no ticket actions contained
 - Greying out send-tickets button if tickets are not sendable
+
+**2017-07-21**
+
+v1.0.0
+
+- Adding configuration parameter `showAlertOnExpiredKeyperToken`
+- Fixing bugs related to order partner updates and barcode polling
+- Improving UX via slight adaptions and text changes
+- Fixing problem of redundant calls after each logout/login process
+- Fixing a bug that lead to a logout race condition
+- Logging off the user for _every_ call that returns an unauthorized response (401)
 
 ## Getting Started
 

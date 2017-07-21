@@ -28,6 +28,9 @@
 @property (nonatomic, copy) UIImage *sendTicketsBadgeImage; // shown in "send tickets" screen for platform friends
 @property (nonatomic, assign) CGFloat bottomInset; // used to inset views at the bottom (e.g. when displaying SDK with a UITabbar)
 
+// Error Messages
+@property (nonatomic, assign) BOOL showAlertOnExpiredKeyperToken; // default: NO
+
 // Debugging
 @property (nonatomic, assign) BOOL showServerErrorsAsAlerts;
 @property (nonatomic, assign) BOOL enableAFNetworkingLogger;
