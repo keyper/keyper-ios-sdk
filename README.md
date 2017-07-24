@@ -1,9 +1,9 @@
  # Keyper iOS SDK Developers Guide
-**SDK Version: 1.0.0**
+**SDK Version: 1.0.1**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *21 July 2017*
+Last Updated: *24 July 2017*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -60,6 +60,13 @@ v1.0.0
 - Fixing problem of redundant calls after each logout/login process
 - Fixing a bug that lead to a logout race condition
 - Logging off the user for _every_ call that returns an unauthorized response (401)
+
+**2017-07-24**
+
+v1.0.1
+
+- Fixing a bug where a login/logout loop happened in certain scenarios through a race condition
+- Fixing ticket-selector bugs when choosing tickets out of a season ticket
 
 ## Getting Started
 
