@@ -1,9 +1,9 @@
  # Keyper iOS SDK Developers Guide
-**SDK Version: 1.0.1**
+**SDK Version: 1.0.2**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *24 July 2017*
+Last Updated: *2 August 2017*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -68,6 +68,14 @@ v1.0.1
 - Fixing a bug where a login/logout loop happened in certain scenarios through a race condition
 - Fixing ticket-selector bugs when choosing tickets out of a season ticket
 
+**2017-08-02**
+
+v1.0.2
+
+- Adding new internal ticket condition states "used" and "in commission"
+- Fixing bugs when selecting tickets when sending a season ticket
+- Fixing a bug that prevented tickets from being shown correctly transitioning from a pending state to a correct state
+
 ## Getting Started
 
 There are at least two ways to integrate the SDK: with or without Cocoapods. We will show both ways here.
@@ -93,7 +101,7 @@ _Note: You can look at the Example project in this repository to see how the SDK
     
 	```
 	target 'target-name-that-you-copied-from-xcode' do 
-      pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '0.9.1'
+      pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.0.2'
 	end
 	```
 	Look at this repository's branch selector to find out which versions are available. Each version has its own branch. Later on, the SDK might be available via Cocoapod's central repository, but currently it's not.
