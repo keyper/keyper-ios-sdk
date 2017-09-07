@@ -1,9 +1,9 @@
  # Keyper iOS SDK Developers Guide
-**SDK Version: 1.0.2**
+**SDK Version: 1.0.3**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *2 August 2017*
+Last Updated: *7 September 2017*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -75,6 +75,14 @@ v1.0.2
 - Adding new internal ticket condition states "used" and "in commission"
 - Fixing bugs when selecting tickets when sending a season ticket
 - Fixing a bug that prevented tickets from being shown correctly transitioning from a pending state to a correct state
+
+**2017-09-07**
+
+v1.0.3
+
+- Adding new ticket type: packages (i.e. season tickets with multiple barcodes)
+- Adding events list for season tickets (in "Info" tab)
+- Adding ticket count to tickets selection when sending a season ticket as single tickets
 
 ## Getting Started
 
