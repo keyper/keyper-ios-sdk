@@ -1,9 +1,9 @@
  # Keyper iOS SDK Developers Guide
-**SDK Version: 1.0.4**
+**SDK Version: 1.1.0**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *27 September 2017*
+Last Updated: *25 July 2018*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -90,19 +90,34 @@ v1.0.4
 
 - Fixing issues in iOS 11 and on iPhone X.
 
+**2018-07-25**
+
+v1.1.0
+
+- Adding possibility to enable/disable "my ticket" notifications (`setMyTicketsPushNotificationsEnabled` and `getMyTicketsPushNotificationsStatusWithResultBlock` in `KEYSDK`)
+- Adding possibility to let the keyper SDK navigate to affected views as a reaction to a push notification, via
+`handleRemoteNotification:navigateToChangedView:`; `handleRemoteNotification:` is therefore now deprecated
+- Adding possibility for you to track the pending tickets count (`ticketOffersCount`) to e.g. show the number in a `UITabBar` badge.
+- New indicator (like a badge without a number) in tickets view if any offers are pending
+- Migrating to view-controller based status bar appearance
+- Fixing an instance of inappropriate default color (Done button when ticket recipients while sending a ticket)
+- Fixing remaining cosmetic issues when starting the SDK repeatedly with different color configurations
+- Improving ticket detail info view for the case when no upcoming event is available
+- Fixing some UIKit accesses that happened off-main-thread
+- Removing Example app because it was heavily outdated
+
+
 ## Getting Started
 
 There are at least two ways to integrate the SDK: with or without Cocoapods. We will show both ways here.
 
 ### Prerequisites
 
-- This SDK has been built with Xcode 8.1, so we'd recommend you use at least this version.
+- This SDK has been built with Xcode 9.4, so we'd recommend you use at least this version.
 - If you decide to use Cocoapods, you need to use version 1.0.0 or higher (check with ```pod --version```), since the podspec is not compabible with lower versions.
 - The SDK does not use any Swift code, so you need not worry about runtime versions. 
 
 ### Adding SDK Binaries WITH Cocopoapods
-
-_Note: You can look at the Example project in this repository to see how the SDK is integrated using Cocoapods. Please note though that you will have to integrate the ```keyper-ios-sdk``` pod via ```pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '0.9.1'```, since the local path declaration only works for this example project._
 
 1. Open Terminal.app
 2. Update/install Cocoapods by running ```sudo gem install cocoapods```
@@ -115,7 +130,7 @@ _Note: You can look at the Example project in this repository to see how the SDK
     
 	```
 	target 'target-name-that-you-copied-from-xcode' do 
-      pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.0.2'
+      pod 'keyper-ios-sdk', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.1.0'
 	end
 	```
 	Look at this repository's branch selector to find out which versions are available. Each version has its own branch. Later on, the SDK might be available via Cocoapod's central repository, but currently it's not.
@@ -124,7 +139,7 @@ _Note: You can look at the Example project in this repository to see how the SDK
 
 ### Adding SDK Binaries WITHOUT Cocopoapods
 
-1. Download and unzip the SDK's files (e.g., for version 0.9.1, the complete ZIP file can be found at https://github.com/keyper/keyper-ios-sdk/archive/0.9.1.zip - look at this repository's branch/tag selector to find out which versions are available).
+1. Download and unzip the SDK's files (e.g., for version 1.1.0, the complete ZIP file can be found at https://github.com/keyper/keyper-ios-sdk/archive/1.1.0.zip - look at this repository's branch/tag selector to find out which versions are available).
 2. Create a ```keyper SDK```, ```Vendor``` or similar group in your Xcode project if you don't want the SDK's files to clutter your structure
 3. Locate the folder ```keyper-ios-sdk``` within the previously extracted files, and drag them into your project (into a group if you want). If the previously extracted folder is within your project's folder, you can uncheck ```Copy items if needed``` in the dialog. Please note that you will only ever need the files in the ```keyper-ios-sdk``` folder, so you can delete all files outside that.
 
@@ -157,16 +172,6 @@ Therefore, please add this to your app target's Info.plist file:
 ## Localization/Language
 
 You need to setup the localizations that you want the SDK to show within your project. Currently, keyper SDK supports English and German (en & de). Go to your project file, select the project in the left pane at the top, and look at the "Localizations" section. E.g. if you only have an "English" item in this section, then the SDK will be in English only.
-
-## Sample App
-
-If you want to see a working app, please make sure you have the current version of Cocoapods installed (```sudo gem install cocoapods```) and execute this in Terminal.app: 
-
-```pod try https://github.com/keyper/keyper-ios-sdk.git```. 
-
-This will checkout the example app and open it as an Xcode workspace. 
-
-Alternatively, clone this repository and open ```Example/keyper-ios-sdk.xcworkspace```.
 
 ## Development
 The SDK consists of a singleton instance (```[KEYSDK sharedSDK]```) that exposes some helper methods and a few classes, that help you integrate a complete mobile ticket solution to your app.
@@ -328,7 +333,7 @@ The actual notification handling is done with the following code. Note that this
 
 ### Deep Linking
 
-keyper features a tight integration with branch.io's deep linking framework. To setup deep linking in your app, please follow these steps (you can also look at the sample app code):
+keyper features a tight integration with branch.io's deep linking framework. To setup deep linking in your app, please follow these steps:
 
 **1. Add your app's branch key to each relevant target's Info.plist file:**
 
