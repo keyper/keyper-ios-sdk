@@ -1,8 +1,0 @@
-module keyperSDK {
-  export *
-  header "KEYSDK.h"
-  header "KEYPushNotificationRecommendedHostAppAction.h"
-  header "KEYSDKConfiguration.h"
-  header "KEYSDKConstants.h"
-  header "KEYTicketOffersCount.h"
-}

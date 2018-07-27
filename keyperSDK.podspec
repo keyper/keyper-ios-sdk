@@ -27,14 +27,14 @@ Integrate a full ticketing solution by using this SDK.
   s.social_media_url        = 'https://twitter.com/keyper'
 
   s.platforms               = { :ios => '8.0' }
-  s.source                  = { :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => s.version.to_s }
+  s.source                  = { :git => 'https://github.com/keyper/keyper-ios-sdk.git', :branch => "1.1.0-integration" }
 
-  s.source_files            = 'keyperSDK/Headers/*.h'
-  s.public_header_files     = 'keyperSDK/Headers/*.h'
-  s.vendored_libraries      = 'keyperSDK/libKeyperSDK.a'
+  s.source_files            = 'keyperSDK/keyperSDK.framework/Headers/*.h'
+  s.public_header_files     = 'keyperSDK/keyperSDK.framework/Headers/*.h'
+  s.vendored_frameworks     = 'keyperSDK/keyperSDK.framework'
   s.preserve_paths          = 'keyperSDK/*'
-  s.resources               = ['keyperSDK/Resources/**/*']
-  s.module_map              = 'keyperSDK/module.modulemap'
+  s.resources               = ['keyperSDK/keyperSDK.framework/Resources/**/*']
+  s.module_name             = 'keyperSDK'
   # s.preserve_paths          = 'keyperSDK/keyperSDK.framework/*'
   
   s.frameworks  = 'Foundation', 'UIKit', 'MapKit', 'EventKit', 'EventKitUI', 'AddressBook', 'CoreGraphics', 'CoreLocation', 'CoreImage', 'AVFoundation', 'ImageIO', 'MessageUI', 'SystemConfiguration', 'MobileCoreServices', 'Accelerate'
