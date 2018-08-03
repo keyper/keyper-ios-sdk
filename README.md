@@ -1,9 +1,9 @@
  # Keyper iOS SDK Developers Guide
-**SDK Version: 1.1.1**
+**SDK Version: 1.1.2**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *30 July 2018*
+Last Updated: *3 August 2018*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -115,6 +115,12 @@ v1.1.1
 - Adding internal support for templates (e.g. for displaying banners in tickets above the barcode)
 - Fixing broken status bar color in archived tickets view.
 
+**2018-08-03**
+
+v1.1.2
+
+- Fixing a problem where old ticket data could be shown after logging out if integrating the SDK in a non-fullscreen manner.
+
 
 ## Getting Started
 
@@ -139,7 +145,7 @@ There are at least two ways to integrate the SDK: with or without Cocoapods. We 
     
 	```
 	target 'target-name-that-you-copied-from-xcode' do 
-      pod 'keyperSDK', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.1.1'
+      pod 'keyperSDK', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.1.2'
 	end
 	```
 	Look at this repository's branch selector to find out which versions are available. Each version has its own branch. Later on, the SDK might be available via Cocoapod's central repository, but currently it's not.
@@ -148,7 +154,7 @@ There are at least two ways to integrate the SDK: with or without Cocoapods. We 
 
 ### Adding SDK Binaries WITHOUT Cocopoapods
 
-1. Download and unzip the SDK's files (e.g., for version 1.1.1, the complete ZIP file can be found at https://github.com/keyper/keyper-ios-sdk/archive/1.1.1.zip - look at this repository's branch/tag selector to find out which versions are available).
+1. Download and unzip the SDK's files (e.g., for version 1.1.2, the complete ZIP file can be found at https://github.com/keyper/keyper-ios-sdk/archive/1.1.2.zip - look at this repository's branch/tag selector to find out which versions are available).
 2. Create a ```keyper SDK```, ```Vendor``` or similar group in your Xcode project if you don't want the SDK's files to clutter your structure
 3. Locate the framework within the previously extracted files, and drag it into your project (into a group if you want). You might also have to drag it into project settings > Target > General > Embedded binaries, and into Build Phases > Link Binary with Libraries.
 
