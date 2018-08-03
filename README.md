@@ -92,7 +92,7 @@ v1.0.4
 
 **2018-07-27**
 
-v1.1.1
+v1.1.0
 
 - Now bundled into a framework instead of only a static library
 - The pod name has changed to `keyperSDK` (instead of `keyper-ios-sdk`) - please update all your import statements and perform a clean (CMD+Shift+K)! The reason for the rename is that the dashes in the old name were translated to underscores, and we suspected issues with the framework integration because of that. The other instances of `keyper-ios-sdk` (github repo URL, bundle file names,...) stay unchanged for now to avoid more breaking changes.
