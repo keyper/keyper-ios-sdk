@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'keyperSDK'
-  s.version          = '1.1.2'
+  s.version          = '1.2.0'
   s.summary          = 'iOS SDK for keyper.io - ticketing with friends.'
 
 # This description is used to generate tags and improve search results.
@@ -26,8 +26,8 @@ Integrate a full ticketing solution by using this SDK.
   s.authors                 = { 'Manuel Maly' => 'manuel.maly@gmail.com' }
   s.social_media_url        = 'https://twitter.com/keyper'
 
-  s.platforms               = { :ios => '8.0' }
-  s.source                  = { :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => "1.1.2" }
+  s.platforms               = { :ios => '9.0' }
+  s.source                  = { :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => "1.2.0" }
 
   s.source_files            = 'keyperSDK/keyperSDK.framework/Headers/*.h'
   s.public_header_files     = 'keyperSDK/keyperSDK.framework/Headers/*.h'
@@ -37,6 +37,6 @@ Integrate a full ticketing solution by using this SDK.
   s.module_name             = 'keyperSDK'
   # s.preserve_paths          = 'keyperSDK/keyperSDK.framework/*'
   
-  s.frameworks  = 'Foundation', 'UIKit', 'MapKit', 'EventKit', 'EventKitUI', 'AddressBook', 'CoreGraphics', 'CoreLocation', 'CoreImage', 'AVFoundation', 'ImageIO', 'MessageUI', 'SystemConfiguration', 'MobileCoreServices', 'Accelerate'
+  s.frameworks  = 'Foundation', 'UIKit', 'MapKit', 'EventKit', 'EventKitUI', 'AddressBook', 'CoreGraphics', 'CoreLocation', 'CoreImage', 'AVFoundation', 'ImageIO', 'MessageUI', 'SystemConfiguration', 'MobileCoreServices', 'Accelerate', 'PassKit'
   s.libraries   = 'xml2', 'z'
 end

@@ -1,9 +1,9 @@
  # Keyper iOS SDK Developers Guide
-**SDK Version: 1.1.2**
+**SDK Version: 1.2.0**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *3 August 2018*
+Last Updated: *19 May 2019*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
@@ -122,13 +122,22 @@ v1.1.2
 - Fixing a problem where old ticket data could be shown after logging out if integrating the SDK in a non-fullscreen manner.
 
 
+**2019-05-19**
+
+v1.2.0
+
+- Add Apple Wallet support for tickets
+- Fixing various layout problems on newer iPhones (especially XR)
+- Fixing missing cancel-search-button when sending a ticket on small iPhones (e.g. 5s)
+
+
 ## Getting Started
 
 There are at least two ways to integrate the SDK: with or without Cocoapods. We will show both ways here.
 
 ### Prerequisites
 
-- This SDK has been built with Xcode 9.4, so we'd recommend you use at least this version.
+- This SDK has been built with Xcode 10.2, so we'd recommend you use at least this version.
 - If you decide to use Cocoapods, you need to use version 1.0.0 or higher (check with ```pod --version```), since the podspec is not compabible with lower versions.
 - The SDK does not use any Swift code, so you need not worry about runtime versions. 
 
@@ -145,7 +154,7 @@ There are at least two ways to integrate the SDK: with or without Cocoapods. We 
     
 	```
 	target 'target-name-that-you-copied-from-xcode' do 
-      pod 'keyperSDK', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.1.2'
+      pod 'keyperSDK', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.2.0'
 	end
 	```
 	Look at this repository's branch selector to find out which versions are available. Each version has its own branch. Later on, the SDK might be available via Cocoapod's central repository, but currently it's not.
@@ -154,7 +163,7 @@ There are at least two ways to integrate the SDK: with or without Cocoapods. We 
 
 ### Adding SDK Binaries WITHOUT Cocopoapods
 
-1. Download and unzip the SDK's files (e.g., for version 1.1.2, the complete ZIP file can be found at https://github.com/keyper/keyper-ios-sdk/archive/1.1.2.zip - look at this repository's branch/tag selector to find out which versions are available).
+1. Download and unzip the SDK's files (e.g., for version 1.2.0, the complete ZIP file can be found at https://github.com/keyper/keyper-ios-sdk/archive/1.2.0.zip - look at this repository's branch/tag selector to find out which versions are available).
 2. Create a ```keyper SDK```, ```Vendor``` or similar group in your Xcode project if you don't want the SDK's files to clutter your structure
 3. Locate the framework within the previously extracted files, and drag it into your project (into a group if you want). You might also have to drag it into project settings > Target > General > Embedded binaries, and into Build Phases > Link Binary with Libraries.
 
@@ -283,7 +292,7 @@ The logout method will clear the keyper user session and all related data from t
 
 ### Push Notifications
 
-To register for remote push notifications (if your app not already does), add this code to the App Delegate:
+To register for remote push notifications (if your app not already does), add this code to the App Delegate (or, use the newer UNNotification APIs):
 
 ```
 - (void)requestPushNotifications {
@@ -416,7 +425,7 @@ If you want your users to obtain keyper push notifications, e.g. when they get a
 }
 ```
 
-**2. In order to allow keyper SDK to handle the received notificaitons, you have to propagate them to the SDK.** 
+**2. In order to allow keyper SDK to handle the received notifications, you have to propagate them to the SDK.** 
 
 The SDK offers you a few helper methods to help you do that.  
 Once you receive a notification, you can inspect and act on the notification like so:
