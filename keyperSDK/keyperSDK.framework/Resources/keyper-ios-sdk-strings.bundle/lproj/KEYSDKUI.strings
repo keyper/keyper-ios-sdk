@@ -1,0 +1,641 @@
+/* No comment provided by engineer. */
+"%@ geht auch zu diesem Event." = "%@ geht auch zu diesem Event.";
+
+/* No comment provided by engineer. */
+"%@ ist deine primäre E-Mail-Adresse, mit der du dich bei keyper anmelden kannst. \n\nSetze eine andere E-Mail-Adresse als primäre, um diese E-Mail-Adresse zu löschen." = "%@ ist deine primäre E-Mail-Adresse, mit der du dich bei keyper anmelden kannst. \n\nSetze eine andere E-Mail-Adresse als primäre, um diese E-Mail-Adresse zu löschen.";
+
+/* Ticket Card Start Date */
+"%@ Uhr" = "%@ Uhr";
+
+/* No comment provided by engineer. */
+"%@ und %@ gehen auch zu diesem Event." = "%@ und %@ gehen auch zu diesem Event.";
+
+/* No comment provided by engineer. */
+"%@\nBitte versuch es später noch einmal." = "%@\nBitte versuch es später noch einmal.";
+
+/* No comment provided by engineer. */
+"%1$d %@ %3$@ noch nicht auf keyper" = "%1$d %@ %3$@ noch nicht auf keyper";
+
+/* No comment provided by engineer. */
+"%d Tickets" = "%d Tickets";
+
+/* No comment provided by engineer. */
+"%d TICKETS SENDEN" = "%d TICKETS SENDEN";
+
+/* No comment provided by engineer. */
+"%d weitere Freunde" = "%d weitere Freunde";
+
+/* No comment provided by engineer. */
+"1 Ticket" = "1 Ticket";
+
+/* No comment provided by engineer. */
+"1/4 Tickets\nFREUNDE WÄHLEN" = "1/4 Tickets\nFREUNDE WÄHLEN";
+
+/* No comment provided by engineer. */
+"\nSende Tickets an deine Telefon Kontakte." = "\nSende Tickets an deine Telefon Kontakte.";
+
+/* No comment provided by engineer. */
+"ab %@" = "ab %@";
+
+/* No comment provided by engineer. */
+"Abbrechen" = "Abbrechen";
+
+/* No comment provided by engineer. */
+"Abgelehnt" = "Abgelehnt";
+
+/* No comment provided by engineer. */
+"AGB" = "AGB";
+
+/* No comment provided by engineer. */
+"Aktuelles Passwort" = "Aktuelles Passwort";
+
+/* No comment provided by engineer. */
+"AKTUELLES PASSWORT" = "AKTUELLES PASSWORT";
+
+/* No comment provided by engineer. */
+"An \"%@\"" = "An \"%@\"";
+
+/* No comment provided by engineer. */
+"AN:" = "AN:";
+
+/* No comment provided by engineer. */
+"Anfrage hat zu lange gedauert" = "Anfrage hat zu lange gedauert";
+
+/* No comment provided by engineer. */
+"Angebot" = "Angebot";
+
+/* No comment provided by engineer. */
+"Anmeldung fehlgeschlagen" = "Anmeldung fehlgeschlagen";
+
+/* No comment provided by engineer. */
+"Anzahl der Tickets und Empfänger stimmt nicht überein." = "Anzahl der Tickets und Empfänger stimmt nicht überein.";
+
+/* No comment provided by engineer. */
+"Archivierte Tickets" = "Archivierte Tickets";
+
+/* No comment provided by engineer. */
+"AUSGANG" = "AUSGANG";
+
+/* No comment provided by engineer. */
+"Bearbeiten" = "Bearbeiten";
+
+/* No comment provided by engineer. */
+"Beginn: %@ Uhr" = "Beginn: %@ Uhr";
+
+/* No comment provided by engineer. */
+"Beim Speichern der Daten ist ein Fehler aufgetreten." = "Beim Speichern der Daten ist ein Fehler aufgetreten.";
+
+/* No comment provided by engineer. */
+"Bestätigen" = "Bestätigen";
+
+/* No comment provided by engineer. */
+"Bestätigung der Telefonnummer\n\n%@\n\nIst diese Nummer korrekt?" = "Bestätigung der Telefonnummer\n\n%@\n\nIst diese Nummer korrekt?";
+
+/* No comment provided by engineer. */
+"Bestätigung erneut senden" = "Bestätigung erneut senden";
+
+/* No comment provided by engineer. */
+"Bestätigungs-E-Mail konnte nicht gesendet werden." = "Bestätigungs-E-Mail konnte nicht gesendet werden.";
+
+/* No comment provided by engineer. */
+"Bestätigungs-E-Mail wurde gesendet!" = "Bestätigungs-E-Mail wurde gesendet!";
+
+/* No comment provided by engineer. */
+"Bibliothek" = "Bibliothek";
+
+/* No comment provided by engineer. */
+"Bitte 2x dasselbe Passwort eingeben" = "Bitte 2x dasselbe Passwort eingeben";
+
+/* No comment provided by engineer. */
+"Bitte gib deinen Nachnamen an" = "Bitte gib deinen Nachnamen an";
+
+/* No comment provided by engineer. */
+"Bitte gib deinen Vornamen an" = "Bitte gib deinen Vornamen an";
+
+/* No comment provided by engineer. */
+"Bitte gib eine Email-Adresse an" = "Bitte gib eine Email-Adresse an";
+
+/* No comment provided by engineer. */
+"Bitte gib eine Telefonnr. an" = "Bitte gib eine Telefonnr. an";
+
+/* No comment provided by engineer. */
+"Code ungültig!" = "Code ungültig!";
+
+/* No comment provided by engineer. */
+"das Ticket sofort verwenden, auch wenn sie dir das Geld dafür noch nicht gegeben haben." = "das Ticket sofort verwenden, auch wenn sie dir das Geld dafür noch nicht gegeben haben.";
+
+/* No comment provided by engineer. */
+"Dein Freund kann" = "Dein Freund kann";
+
+/* No comment provided by engineer. */
+"Deine E-Mail-Adresse wurde nicht von Facebook übermittelt. Bitte gib deine E-Mail-Adresse in deinen Privatsphären-Einstellungen auf Facebook frei oder registriere dich mit deiner E-Mail-Adresse und einem Passwort. Du hast danach noch die Möglichkeit, deinen keyper Account mit Facebook zu verbinden." = "Deine E-Mail-Adresse wurde nicht von Facebook übermittelt. Bitte gib deine E-Mail-Adresse in deinen Privatsphären-Einstellungen auf Facebook frei oder registriere dich mit deiner E-Mail-Adresse und einem Passwort. Du hast danach noch die Möglichkeit, deinen keyper Account mit Facebook zu verbinden.";
+
+/* No comment provided by engineer. */
+"Deine Freunde können" = "Deine Freunde können";
+
+/* No comment provided by engineer. */
+"Deine Freunde können das Ticket erst nach erfolgreicher Bezahlung verwenden." = "Deine Freunde können das Ticket erst nach erfolgreicher Bezahlung verwenden.";
+
+/* No comment provided by engineer. */
+"Deine Freunde können das Ticket sofort verwenden, auch wenn sie noch nicht bezahlt haben." = "Deine Freunde können das Ticket sofort verwenden, auch wenn sie noch nicht bezahlt haben.";
+
+/* No comment provided by engineer. */
+"Deine Sitzung ist abgelaufen - bitte melde dich neu an." = "Deine Sitzung ist abgelaufen - bitte melde dich neu an.";
+
+/* No comment provided by engineer. */
+"Der Facebook-Account ist nicht verifiziert" = "Der Facebook-Account ist nicht verifiziert";
+
+/* No comment provided by engineer. */
+"Der Facebook-Account wird bereits als keyper-Account verwendet oder wurde bereits mit einem anderen keyper-Account verknüpft." = "Der Facebook-Account wird bereits als keyper-Account verwendet oder wurde bereits mit einem anderen keyper-Account verknüpft.";
+
+/* No comment provided by engineer. */
+"Der Server hat keinen Username oder Ticketpreis gesendet" = "Der Server hat keinen Username oder Ticketpreis gesendet";
+
+/* No comment provided by engineer. */
+"Die Email-Adresse des Facebook-Accounts ist bereits mit einem anderen keyper-Account verknüpft." = "Die Email-Adresse des Facebook-Accounts ist bereits mit einem anderen keyper-Account verknüpft.";
+
+/* No comment provided by engineer. */
+"Die primäre Email-Adresse des Users ist nicht verifiziert." = "Die primäre Email-Adresse des Users ist nicht verifiziert.";
+
+/* No comment provided by engineer. */
+"Die Verbindung mit Facebook konnte nicht getrennt werden. Du musst zuerst ein Passwort angeben, damit du dich anmelden kannst." = "Die Verbindung mit Facebook konnte nicht getrennt werden. Du musst zuerst ein Passwort angeben, damit du dich anmelden kannst.";
+
+/* No comment provided by engineer. */
+"Diese E-Mail ist bereits die primäre." = "Diese E-Mail ist bereits die primäre.";
+
+/* No comment provided by engineer. */
+"Diese E-Mail ist bereits entfernt." = "Diese E-Mail ist bereits entfernt.";
+
+/* No comment provided by engineer. */
+"Diese E-Mail kann nicht als primäre gesetzt werden." = "Diese E-Mail kann nicht als primäre gesetzt werden.";
+
+/* No comment provided by engineer. */
+"Diese E-Mail kann nicht entfernt werden." = "Diese E-Mail kann nicht entfernt werden.";
+
+/* No comment provided by engineer. */
+"Diese E-Mail-Adresse wurde bereits bestätigt." = "Diese E-Mail-Adresse wurde bereits bestätigt.";
+
+/* No comment provided by engineer. */
+"Diese Telefonnummer ist bereits entfernt." = "Diese Telefonnummer ist bereits entfernt.";
+
+/* No comment provided by engineer. */
+"Diese Telefonnummer ist bereits in Verwendung!" = "Diese Telefonnummer ist bereits in Verwendung!";
+
+/* No comment provided by engineer. */
+"Diese Telefonnummer kann nicht entfernt werden." = "Diese Telefonnummer kann nicht entfernt werden.";
+
+/* No comment provided by engineer. */
+"Dieser Event wurde von keyper erstellt." = "Dieser Event wurde von keyper erstellt.";
+
+/* No comment provided by engineer. */
+"Du" = "Du";
+
+/* No comment provided by engineer. */
+"Du bekommst" = "Du bekommst";
+
+/* No comment provided by engineer. */
+"Du bist über Facebook angemeldet und besitzt noch kein Passwort! Setze ein Passwort, um dich in Zukunft auch mit deiner E-Mail-Adresse anmelden zu können." = "Du bist über Facebook angemeldet und besitzt noch kein Passwort! Setze ein Passwort, um dich in Zukunft auch mit deiner E-Mail-Adresse anmelden zu können.";
+
+/* No comment provided by engineer. */
+"Du hast %1$d %@ auf keyper" = "Du hast %1$d %@ auf keyper";
+
+/* No comment provided by engineer. */
+"Du hast keine archivierten Tickets." = "Du hast keine archivierten Tickets.";
+
+/* No comment provided by engineer. */
+"Du hast momentan keine Facebook Freunde bei keyper." = "Du hast momentan keine Facebook Freunde bei keyper.";
+
+/* No comment provided by engineer. */
+"Du hast momentan keine Freunde bei keyper." = "Du hast momentan keine Freunde bei keyper.";
+
+/* No comment provided by engineer. */
+"Du hast momentan keine Tickets." = "Du hast momentan keine Tickets.";
+
+/* No comment provided by engineer. */
+"Du musst %@ erst bestätigen damit du dich damit anmelden kannst." = "Du musst %@ erst bestätigen damit du dich damit anmelden kannst.";
+
+/* No comment provided by engineer. */
+"Du musst dich zuerst mit Facebook verbinden:" = "Du musst dich zuerst mit Facebook verbinden:";
+
+/* No comment provided by engineer. */
+"Du scheinst nicht mehr eingeloggt zu sein." = "Du scheinst nicht mehr eingeloggt zu sein.";
+
+/* No comment provided by engineer. */
+"Du schuldest" = "Du schuldest";
+
+/* No comment provided by engineer. */
+"Durch Annehmen des Tickets akzeptierst du die AGB des Veranstalters und stimmst zu, Benachrichtigungen zu erhalten." = "Durch Annehmen des Tickets akzeptierst du die AGB des Veranstalters und stimmst zu, Benachrichtigungen zu erhalten.";
+
+/* No comment provided by engineer. */
+"E-Mail wurde als primäre gesetzt." = "E-Mail wurde als primäre gesetzt.";
+
+/* No comment provided by engineer. */
+"E-Mail wurde entfernt." = "E-Mail wurde entfernt.";
+
+/* No comment provided by engineer. */
+"E-Mail-Adresse entfernen" = "E-Mail-Adresse entfernen";
+
+/* No comment provided by engineer. */
+"E-Mail-Adresse hinzufügen" = "E-Mail-Adresse hinzufügen";
+
+/* No comment provided by engineer. */
+"Ein Fehler ist aufgetreten" = "Ein Fehler ist aufgetreten";
+
+/* No comment provided by engineer. */
+"Ein Serverfehler ist aufgetreten" = "Ein Serverfehler ist aufgetreten";
+
+/* No comment provided by engineer. */
+"Ein unbekannter Fehler ist aufgetreten." = "Ein unbekannter Fehler ist aufgetreten.";
+
+/* No comment provided by engineer. */
+"EINGANG" = "EINGANG";
+
+/* No comment provided by engineer. */
+"Eingang: %@" = "Eingang: %@";
+
+/* No comment provided by engineer. */
+"Angebote" = "Angebote";
+
+/* No comment provided by engineer. */
+"Einladungen - Ausgang" = "Einladungen - Ausgang";
+
+/* No comment provided by engineer. */
+"Einladungen - Eingang" = "Einladungen - Eingang";
+
+/* No comment provided by engineer. */
+"Einlass: %@ Uhr" = "Einlass: %@ Uhr";
+
+/* No comment provided by engineer. */
+"Einstellungen > Datenschutz > Kontakte" = "Einstellungen > Datenschutz > Kontakte";
+
+/* No comment provided by engineer. */
+"Email oder Passwort falsch eingegeben." = "Email oder Passwort falsch eingegeben.";
+
+/* No comment provided by engineer. */
+"Email-Adresse" = "Email-Adresse";
+
+/* No comment provided by engineer. */
+"Empfänger haben zusammen mehr Tickets als verfügbar sind." = "Empfänger haben zusammen mehr Tickets als verfügbar sind.";
+
+/* No comment provided by engineer. */
+"Erinnern" = "Erinnern";
+
+/* No comment provided by engineer. */
+"Erst nach Bezahlung" = "Erst nach Bezahlung";
+
+/* No comment provided by engineer. */
+"Event Info" = "Event Info";
+
+/* No comment provided by engineer. */
+"Events" = "Events";
+
+/* No comment provided by engineer. */
+"Facebook" = "Facebook";
+
+/* No comment provided by engineer. */
+"Facebook-Freund" = "Facebook-Freund";
+
+/* No comment provided by engineer. */
+"Facebook-Freunde" = "Facebook-Freunde";
+
+/* No comment provided by engineer. */
+"Favoriten" = "Favoriten";
+
+/* No comment provided by engineer. */
+"Fehler beim Laden aufgetreten" = "Fehler beim Laden aufgetreten";
+
+/* No comment provided by engineer. */
+"Fehler beim Verbinden" = "Fehler beim Verbinden";
+
+/* No comment provided by engineer. */
+"Fertig" = "Fertig";
+
+/* No comment provided by engineer. */
+"Finde Freunde über Facebook und deine Kontakte." = "Finde Freunde über Facebook und deine Kontakte.";
+
+/* No comment provided by engineer. */
+"Foto aufnehmen" = "Foto aufnehmen";
+
+/* No comment provided by engineer. */
+"Freund" = "Freund";
+
+/* No comment provided by engineer. */
+"Freund hinzufügen" = "Freund hinzufügen";
+
+/* No comment provided by engineer. */
+"Freunde" = "Freunde";
+
+/* No comment provided by engineer. */
+"Freunde finden" = "Freunde finden";
+
+/* No comment provided by engineer. */
+"Freunde wählen" = "Freunde wählen";
+
+/* No comment provided by engineer. */
+"Freundschaft beenden" = "Freundschaft beenden";
+
+/* No comment provided by engineer. */
+"Freundschaft mit %@ beenden?" = "Freundschaft mit %@ beenden?";
+
+/* No comment provided by engineer. */
+"Freundschaftsanfrage" = "Freundschaftsanfrage";
+
+/* No comment provided by engineer. */
+"Freundschaftsanfragen" = "Freundschaftsanfragen";
+
+/* No comment provided by engineer. */
+"Geschenk" = "Geschenk";
+
+/* No comment provided by engineer. */
+"Ich wurde bezahlt" = "Ich wurde bezahlt";
+
+/* No comment provided by engineer. */
+"Ignorieren" = "Ignorieren";
+
+/* No comment provided by engineer. */
+"Info" = "Info";
+
+/* No comment provided by engineer. */
+"ist" = "ist";
+
+/* No comment provided by engineer. */
+"Keine Internetverbindung" = "Keine Internetverbindung";
+
+/* No comment provided by engineer. */
+"Keine Ticketeinladungen." = "Keine Ticketeinladungen.";
+
+/* No comment provided by engineer. */
+"App aktivieren" = "App aktivieren";
+
+/* No comment provided by engineer. */
+"keyper macht mehr Spaß mit Freunden." = "keyper macht mehr Spaß mit Freunden.";
+
+/* No comment provided by engineer. */
+"Kontakte" = "Kontakte";
+
+/* No comment provided by engineer. */
+"Kostenlos" = "Kostenlos";
+
+/* No comment provided by engineer. */
+"Ländercode auswählen" = "Ländercode auswählen";
+
+/* No comment provided by engineer. */
+"Löschen der Facebook E-Mail-Adresse ist in dieser Version noch nicht möglich." = "Löschen der Facebook E-Mail-Adresse ist in dieser Version noch nicht möglich.";
+
+/* No comment provided by engineer. */
+"Meine Tickets" = "Meine Tickets";
+
+/* No comment provided by engineer. */
+"Mit Facebook verbinden" = "Mit Facebook verbinden";
+
+/* No comment provided by engineer. */
+"Mit Facebook verbunden" = "Mit Facebook verbunden";
+
+/* No comment provided by engineer. */
+"Möchtest du die Tickets annehmen?" = "Möchtest du die Tickets annehmen?";
+
+/* No comment provided by engineer. */
+"Nach Freunden suchen" = "Nach Freunden suchen";
+
+/* No comment provided by engineer. */
+"Nachname" = "Nachname";
+
+/* No comment provided by engineer. */
+"Neues Passwort" = "Neues Passwort";
+
+/* No comment provided by engineer. */
+"NEUES PASSWORT" = "NEUES PASSWORT";
+
+/* No comment provided by engineer. */
+"Neues Passwort, erneut" = "Neues Passwort, erneut";
+
+/* No comment provided by engineer. */
+"%@ hat die Tickets angenommen. Du bekommst \n%@." = "%@ hat die Tickets angenommen. Du bekommst \n%@.";
+
+/* No comment provided by engineer. */
+"Die Tickets befinden sich jetzt in deinem Account unter \"Meine Tickets\". Du schuldest %@ \n%@." = "Die Tickets befinden sich jetzt in deinem Account unter \"Meine Tickets\". Du schuldest %@ \n%@.";
+
+/* No comment provided by engineer. */
+"Noch keine Events vorhanden." = "Noch keine Events vorhanden.";
+
+/* No comment provided by engineer. */
+"Nur Freunde können Events von %@ sehen." = "Nur Freunde können Events von %@ sehen.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Ort in Maps anzeigen" = "Ort in Maps anzeigen";
+
+/* No comment provided by engineer. */
+"Passwort" = "Passwort";
+
+/* No comment provided by engineer. */
+"Passwort ändern" = "Passwort ändern";
+
+/* No comment provided by engineer. */
+"Passwort erfolgreich geändert" = "Passwort erfolgreich geändert";
+
+/* No comment provided by engineer. */
+"Passwort konnte nicht gesetzt werden" = "Passwort konnte nicht gesetzt werden";
+
+/* No comment provided by engineer. */
+"Preis" = "Preis";
+
+/* No comment provided by engineer. */
+"Primäre E-Mail-Adresse" = "Primäre E-Mail-Adresse";
+
+/* No comment provided by engineer. */
+"Profil" = "Profil";
+
+/* No comment provided by engineer. */
+"Profil Bearbeiten" = "Profil Bearbeiten";
+
+/* No comment provided by engineer. */
+"Reihe: %@" = "Reihe: %@";
+
+/* No comment provided by engineer. */
+"Sende Tickets an deine Kontakte" = "Sende Tickets an deine Kontakte";
+
+/* No comment provided by engineer. */
+"sind" = "sind";
+
+/* No comment provided by engineer. */
+"Sitz %@" = "Sitz %@";
+
+/* No comment provided by engineer. */
+"Sitz: %@" = "Sitz: %@";
+
+/* No comment provided by engineer. */
+"Sofort verwendbar" = "Sofort verwendbar";
+
+/* No comment provided by engineer. */
+"Speichern" = "Speichern";
+
+/* No comment provided by engineer. */
+"Suche" = "Suche";
+
+/* No comment provided by engineer. */
+"Suche nach \"%@\"" = "Suche nach \"%@\"";
+
+/* No comment provided by engineer. */
+"Suche oder wähle unten aus" = "Suche oder wähle unten aus";
+
+/* No comment provided by engineer. */
+"Telefonnummer" = "Telefonnummer";
+
+/* No comment provided by engineer. */
+"Telefonnummer entfernen" = "Telefonnummer entfernen";
+
+/* No comment provided by engineer. */
+"Telefonnummer hinzugefügt!" = "Telefonnummer hinzugefügt!";
+
+/* No comment provided by engineer. */
+"Telefonnummer wurde entfernt." = "Telefonnummer wurde entfernt.";
+
+/* No comment provided by engineer. */
+"Ticket" = "Ticket";
+
+/* No comment provided by engineer. */
+"Ticket %1$d von %2$d" = "Ticket %1$d von %2$d";
+
+/* No comment provided by engineer. */
+"Ticket erfolgreich versendet" = "Ticket erfolgreich versendet";
+
+/* No comment provided by engineer. */
+"Ticket konnte nicht versendet werden" = "Ticket konnte nicht versendet werden";
+
+/* No comment provided by engineer. */
+"TICKET SENDEN" = "TICKET SENDEN";
+
+/* No comment provided by engineer. */
+"Ticket-Einladung konnte nicht abgelehnt werden." = "Ticket-Einladung konnte nicht abgelehnt werden.";
+
+/* No comment provided by engineer. */
+"Ticket-Einladung konnte nicht akzeptiert werden." = "Ticket-Einladung konnte nicht akzeptiert werden.";
+
+/* No comment provided by engineer. */
+"Ticket-Einladung konnte nicht als bezahlt markiert werden." = "Ticket-Einladung konnte nicht als bezahlt markiert werden.";
+
+/* No comment provided by engineer. */
+"Ticket-Einladung konnte nicht verändert werden." = "Ticket-Einladung konnte nicht verändert werden.";
+
+/* No comment provided by engineer. */
+"Ticket-Einladung konnte nicht zurückgezogen werden." = "Ticket-Einladung konnte nicht zurückgezogen werden.";
+
+/* No comment provided by engineer. */
+"Tickets" = "Tickets";
+
+/* No comment provided by engineer. */
+"Tickets erfolgreich versendet" = "Tickets erfolgreich versendet";
+
+/* No comment provided by engineer. */
+"TICKETS KAUFEN" = "TICKETS KAUFEN";
+
+/* No comment provided by engineer. */
+"Tickets konnten nicht versendet werden" = "Tickets konnten nicht versendet werden";
+
+/* No comment provided by engineer. */
+"Tickets senden" = "Tickets senden";
+
+/* No comment provided by engineer. */
+"TICKETS VERSENDEN" = "TICKETS VERSENDEN";
+
+/* No comment provided by engineer. */
+"Tickets zuweisen" = "Tickets zuweisen";
+
+/* No comment provided by engineer. */
+"Unbestätigte E-Mail-Adresse" = "Unbestätigte E-Mail-Adresse";
+
+/* No comment provided by engineer. */
+"ungültig" = "ungültig";
+
+/* No comment provided by engineer. */
+"Unkannter Facebook Fehler" = "Unkannter Facebook Fehler";
+
+/* No comment provided by engineer. */
+"Veranstalter kontaktieren" = "Veranstalter kontaktieren";
+
+/* No comment provided by engineer. */
+"Verbindung mit Facebook getrennt!" = "Verbindung mit Facebook getrennt!";
+
+/* No comment provided by engineer. */
+"Verbindung mit Facebook konnte nicht getrennt werden." = "Verbindung mit Facebook konnte nicht getrennt werden.";
+
+/* No comment provided by engineer. */
+"Verbindung mit Facebook trennen?" = "Verbindung mit Facebook trennen?";
+
+/* No comment provided by engineer. */
+"Verbindung trennen" = "Verbindung trennen";
+
+/* No comment provided by engineer. */
+"Vorname" = "Vorname";
+
+/* No comment provided by engineer. */
+"Vorschläge" = "Vorschläge";
+
+/* No comment provided by engineer. */
+"Warten auf Antwort" = "Warten auf Antwort";
+
+/* No comment provided by engineer. */
+"Wähle eine Empfangs-Adresse:" = "Wähle eine Empfangs-Adresse:";
+
+/* No comment provided by engineer. */
+"Weiter" = "Weiter";
+
+/* No comment provided by engineer. */
+"WEITER" = "WEITER";
+
+/* No comment provided by engineer. */
+"Wer ist dabei?" = "Wer ist dabei?";
+
+/* No comment provided by engineer. */
+"Wir haben dir eine SMS mit dem Code an die oben genannte Nummer geschickt.\n\nUm die Verifizierung deiner Telefonnummer abzuschließen, trage bitte den 4-stelligen Aktivierungscode ein." = "Wir haben dir eine SMS mit dem Code an die oben genannte Nummer geschickt.\n\nUm die Verifizierung deiner Telefonnummer abzuschließen, trage bitte den 4-stelligen Aktivierungscode ein.";
+
+/* No comment provided by engineer. */
+"zu kurz" = "zu kurz";
+
+/* No comment provided by engineer. */
+"zu lang" = "zu lang";
+
+/* No comment provided by engineer. */
+"Zurückgezogen" = "Zurückgezogen";
+
+/* No comment provided by engineer. */
+"Zurückziehen" = "Zurückziehen";
+
+"Tickets hinzufügen" = "Tickets hinzufügen";
+
+"Möchtest du die Tickets zu deinem Account mit der E-Mail-Adresse %@ hinzufügen?" = "Möchtest du die Tickets zu deinem Account mit der E-Mail-Adresse %@ hinzufügen?";
+
+"Tickets konnten nicht transferiert werden." = "Tickets konnten nicht transferiert werden.";
+
+"Bereich: %@" = "Bereich: %@";
+
+"Dieser Ticket-Typ kann momentan nicht versendet werden!" = "Dieser Ticket-Typ kann momentan nicht versendet werden!";
+
+"Diese Ticket(s) können nicht versendet werden!" = "Diese Ticket(s) können nicht versendet werden!";
+
+"Diese Ticket(s) können noch nicht versendet werden - bitte warten Sie einen Moment, bis alle Daten geladen wurden!" = "Diese Ticket(s) können noch nicht versendet werden - bitte warten Sie einen Moment, bis alle Daten geladen wurden!";
+
+"Versendet (offen)" = "Versendet (offen)";
+
+"Kein Zutritt zum aktuellen Event" = "Kein Zutritt zum aktuellen Event";
+
+"In Kommission" = "In Kommission";
+
+"Zugetreten" = "Zugetreten";
+
+"Veranstaltungen" = "Veranstaltungen";
+
+"Keine zukünftigen Events" = "Keine zukünftigen Veranstaltungen";
+
+"Alter Barcode" = "Alter Barcode";
+
+"Barcode" = "Barcode";
+
+"Barcode anzeigen" = "Barcode anzeigen";
+
+"Bitte verbinde dich mit dem Internet" = "Bitte verbinde dich mit dem Internet";
+
+"Ein Serverfehler ist aufgetreten - Bitte versuche es erneut" = "Ein Serverfehler ist aufgetreten - Bitte versuche es erneut";
