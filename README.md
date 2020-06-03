@@ -1,94 +1,46 @@
  # Keyper iOS SDK Developers Guide
-**SDK Version: 1.2.0**
+**SDK Version: 1.3.0**
  
 Contact: *dev@keyper.io*
 
-Last Updated: *19 May 2019*
+Last Updated: *3 June 2020*
 
 The keyper SDK offers developers a complete mobile ticket solution, that they can include and use within their apps.
 
 ## Changelog
 
-**2016-06-29**
+**2020-06-03**
 
-Initial release
+v1.3.0
 
-**2016-12-09**
+- Add Hungarian translations
+- Make ticket sending view fullscreen
+- Change paid icon in ticket-sending-summary-view
+- Add explicit opt-in for ticket acceptance
+- Add support for allowed_payment_states
+- Remove UIWebView instances within the SDK
+- Resolve SSKeychain framework's name collision with iOS-internal framework
 
-v0.9.1
+**2019-05-19**
 
-- Adding support for handling season tickets, and even sending them individually
-- Using request batching (with https://github.com/keyper/KEYBatchRequest)
-- Added deep linking
-- Improving semantics, like price/currency homogeneity
-- Refining language when addressing the user
-- Fixing some bugs
+v1.2.0
 
-**2017-05-31**
+- Add Apple Wallet support for tickets
+- Fixing various layout problems on newer iPhones (especially XR)
+- Fixing missing cancel-search-button when sending a ticket on small iPhones (e.g. 5s)
 
-v0.9.2
+**2018-08-03**
 
-- Adding required appSecreat as KEYConfiguration parameter
-- Improved ticket card view, adding sales type at the bottom of tickets that support it
-- Bug fixes and improvements
+v1.1.2
 
-**2017-06-20**
+- Fixing a problem where old ticket data could be shown after logging out if integrating the SDK in a non-fullscreen manner.
 
-v0.9.3
+**2018-07-30**
 
-- Adding automatic polling and refreshing for pending tickets (whose barcode is still being generated)
-- Turning the device's screen to max brightness when viewing an old/expired barcode 
+v1.1.1
 
-**2017-07-03**
-
-v0.9.4
-
-- Possibly fixing bug where host app does not react to choosing a phone or email address when sending a ticket 
-- Removing existing data of table views when logging out and in again (if user id changes)
-- Preventing multiple entries for contacts with multiple linked entries (e.g. for records from Facebook or Google)
-- Improve messaging when user tries to send tickets that have not yet been loaded
-- Possibly fixing problem that ticket actions are not correctly updated if the new data has no ticket actions contained
-- Greying out send-tickets button if tickets are not sendable
-
-**2017-07-21**
-
-v1.0.0
-
-- Adding configuration parameter `showAlertOnExpiredKeyperToken`
-- Fixing bugs related to order partner updates and barcode polling
-- Improving UX via slight adaptions and text changes
-- Fixing problem of redundant calls after each logout/login process
-- Fixing a bug that lead to a logout race condition
-- Logging off the user for _every_ call that returns an unauthorized response (401)
-
-**2017-07-24**
-
-v1.0.1
-
-- Fixing a bug where a login/logout loop happened in certain scenarios through a race condition
-- Fixing ticket-selector bugs when choosing tickets out of a season ticket
-
-**2017-08-02**
-
-v1.0.2
-
-- Adding new internal ticket condition states "used" and "in commission"
-- Fixing bugs when selecting tickets when sending a season ticket
-- Fixing a bug that prevented tickets from being shown correctly transitioning from a pending state to a correct state
-
-**2017-09-07**
-
-v1.0.3
-
-- Adding new ticket type: packages (i.e. season tickets with multiple barcodes)
-- Adding events list for season tickets (in "Info" tab)
-- Adding ticket count to tickets selection when sending a season ticket as single tickets
-
-**2017-09-27**
-
-v1.0.4
-
-- Fixing issues in iOS 11 and on iPhone X.
+- Adding internal support for templates (e.g. for displaying banners in tickets above the barcode)
+- Fixing broken status bar color in archived tickets view.
 
 **2018-07-27**
 
@@ -108,27 +60,87 @@ v1.1.1
 - Fixing some UIKit accesses that happened off-main-thread
 - Removing Example app because it was heavily outdated
 
-**2018-07-30**
 
-v1.1.1
+**2017-09-27**
 
-- Adding internal support for templates (e.g. for displaying banners in tickets above the barcode)
-- Fixing broken status bar color in archived tickets view.
+v1.0.4
 
-**2018-08-03**
+- Fixing issues in iOS 11 and on iPhone X.
 
-v1.1.2
+**2017-09-07**
 
-- Fixing a problem where old ticket data could be shown after logging out if integrating the SDK in a non-fullscreen manner.
+v1.0.3
 
+- Adding new ticket type: packages (i.e. season tickets with multiple barcodes)
+- Adding events list for season tickets (in "Info" tab)
+- Adding ticket count to tickets selection when sending a season ticket as single tickets
 
-**2019-05-19**
+**2017-08-02**
 
-v1.2.0
+v1.0.2
 
-- Add Apple Wallet support for tickets
-- Fixing various layout problems on newer iPhones (especially XR)
-- Fixing missing cancel-search-button when sending a ticket on small iPhones (e.g. 5s)
+- Adding new internal ticket condition states "used" and "in commission"
+- Fixing bugs when selecting tickets when sending a season ticket
+- Fixing a bug that prevented tickets from being shown correctly transitioning from a pending state to a correct state
+
+**2017-07-24**
+
+v1.0.1
+
+- Fixing a bug where a login/logout loop happened in certain scenarios through a race condition
+- Fixing ticket-selector bugs when choosing tickets out of a season ticket
+
+**2017-07-21**
+
+v1.0.0
+
+- Adding configuration parameter `showAlertOnExpiredKeyperToken`
+- Fixing bugs related to order partner updates and barcode polling
+- Improving UX via slight adaptions and text changes
+- Fixing problem of redundant calls after each logout/login process
+- Fixing a bug that lead to a logout race condition
+- Logging off the user for _every_ call that returns an unauthorized response (401)
+
+**2017-07-03**
+
+v0.9.4
+
+- Possibly fixing bug where host app does not react to choosing a phone or email address when sending a ticket 
+- Removing existing data of table views when logging out and in again (if user id changes)
+- Preventing multiple entries for contacts with multiple linked entries (e.g. for records from Facebook or Google)
+- Improve messaging when user tries to send tickets that have not yet been loaded
+- Possibly fixing problem that ticket actions are not correctly updated if the new data has no ticket actions contained
+- Greying out send-tickets button if tickets are not sendable
+
+**2017-06-20**
+
+v0.9.3
+
+- Adding automatic polling and refreshing for pending tickets (whose barcode is still being generated)
+- Turning the device's screen to max brightness when viewing an old/expired barcode 
+
+**2017-05-31**
+
+v0.9.2
+
+- Adding required appSecreat as KEYConfiguration parameter
+- Improved ticket card view, adding sales type at the bottom of tickets that support it
+- Bug fixes and improvements
+
+**2016-12-09**
+
+v0.9.1
+
+- Adding support for handling season tickets, and even sending them individually
+- Using request batching (with https://github.com/keyper/KEYBatchRequest)
+- Added deep linking
+- Improving semantics, like price/currency homogeneity
+- Refining language when addressing the user
+- Fixing some bugs
+
+**2016-06-29**
+
+Initial release
 
 
 ## Getting Started
@@ -154,7 +166,7 @@ There are at least two ways to integrate the SDK: with or without Cocoapods. We 
     
 	```
 	target 'target-name-that-you-copied-from-xcode' do 
-      pod 'keyperSDK', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.2.0'
+      pod 'keyperSDK', :git => 'https://github.com/keyper/keyper-ios-sdk.git', :tag => '1.3.0'
 	end
 	```
 	Look at this repository's branch selector to find out which versions are available. Each version has its own branch. Later on, the SDK might be available via Cocoapod's central repository, but currently it's not.
